@@ -207,13 +207,13 @@
     }
     else
     {
-      sendAwayMsg(prompt = false);
+      sendAwayMsg(false);
       divTimer.textContent = '00:00';
       keepAliveTime = null;
     }
   }
 
-  swapLang(init = true);
+  swapLang(true);
   setInterval(countDownLoop, 1000);
   countDownLoop();
 })(document, window);
