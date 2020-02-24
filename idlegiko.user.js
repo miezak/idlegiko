@@ -150,7 +150,10 @@
 
   var buttonAwayMsg = doc.createElement('button');
   buttonAwayMsg.textContent = '';
-  buttonAwayMsg.addEventListener('click', sendAwayMsg);
+  buttonAwayMsg.addEventListener('click', function() {
+    /* anon function needed to make default param work */
+    sendAwayMsg();
+  });
   divPanel.appendChild(buttonAwayMsg);
 
   function swapLang(init = false)
