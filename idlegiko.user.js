@@ -40,11 +40,10 @@
   {
     if (!gikoUserName)
       return;
-    if (useNihongo)
-      alert('ユーザー名をロードするために、これ必要です。ごめん！');
-    else
-      alert('this popup is needed to load the username. sorry!');
-    sendMessage(gikoUserName);
+    var loadUserName = confirm(useNihongo ? 'ユーザー名をロードしますか？'
+                                          : 'do you want to load your username?');
+    if (loadUserName)
+      sendMessage(gikoUserName);
   });
 
   var altTextArea  = doc.createElement('textarea');
