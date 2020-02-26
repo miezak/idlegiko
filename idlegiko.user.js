@@ -180,7 +180,10 @@
 
   var buttonLang = doc.createElement('button');
   buttonLang.textContent = '';
-  buttonLang.addEventListener('click', swapLang);
+  buttonLang.addEventListener('click', function() {
+    /* anon function needed to make default param work */
+	  swapLang();
+  });
   divPanel.appendChild(buttonLang);
 
   var divTimer = doc.createElement('div');
